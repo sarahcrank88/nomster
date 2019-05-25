@@ -44,9 +44,11 @@ body {
 
 .pagination {
   font-family: 'Luckiest Guy', cursive;
-  margin-top: 10px;
-  margin-bottom: 15px;
-  padding: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  letter-spacing: 1px;
 }
 
 #map {
@@ -76,4 +78,19 @@ blockquote:before {
 
 blockquote p {
   display: inline;
+}
+
+
+
+div.polaroid {
+  width: 50%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+img {width: 100%}
+
+div.container {
+  text-align: center;
+  padding: 10px 20px;
 }

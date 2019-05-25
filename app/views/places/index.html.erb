@@ -1,21 +1,22 @@
+<div class="pagination">
 <%= paginate @places %>
+</div>
 
 <% @places.each do |place| %>
   <div class="booyah-box col-10 offset-1">
     <h1><%= link_to place.name, place_path(place) %></h1><br />
     <i><%= place.address %></i><br />
-    <p><%= place.description %></p><br />
-    
+    <p><%= place.description %></p>
     <% if place.user.present? %>
       <small><%= place.user.email %></small>
     <% end %>
-    
-    <% if @place.photos.present? %>
-      <% @place.photos.last %>
-        <%= image_tag photo.picture.url %>
+
+    <div class="polaroid">
+      <% if place.photos.present? %>
+        <%= image_tag place.photos[-1].picture.url %>
       <% end %>
-    <% end %>
-    
+    </div>
+
     <% if place.comments.present? %>
       <div class="col-12">
         <blockquote>
@@ -30,4 +31,6 @@
   </div>
 <% end %>
 
+<div class="pagination">
 <%= paginate @places %>
+</div>

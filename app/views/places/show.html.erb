@@ -34,12 +34,16 @@
 <br />
 
   <br/>
-  <% if @place.photos.present? %>
-    <% @place.photos.each do |photo| %>
-      <%= image_tag photo.picture.url %>
-      <%= photo.caption %>
+ 
+    <% if @place.photos.present? %>
+      <% @place.photos.each do |photo| %>
+         <div class="polaroid">
+         <%= image_tag photo.picture.url %>
+         <div class="container">
+        <%= photo.caption %>
+        </div></div>
+      <% end %>
     <% end %>
-  <% end %>
 
 <br />
 
