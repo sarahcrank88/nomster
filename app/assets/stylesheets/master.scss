@@ -28,6 +28,7 @@ body {
 .navbar {
   background: image_url('topnav_background');
   box-shadow: 0px 2px 5px #061845;
+  margin-bottom: 0;
 }
 
 .navbar-inverse .navbar-brand {
@@ -93,4 +94,29 @@ img {width: 100%}
 div.container {
   text-align: center;
   padding: 10px 20px;
+}
+
+.carousel-inner > .carousel-item > img, .carousel-inner > .carousel-item > a > img {
+  max-height: 550px;
+  width: 100%;
+}
+
+.carousel-item.active, 
+.carousel-item-next, 
+.carousel-item-prev {
+  display: block;
+}
+
+.carousel-caption {
+  font-size: 60px;
+  font-weight: 100;
+  text-shadow: rgba(0, 0, 0, 0.95) 2px 2px;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  position: absolute;
+  left: 0;
+  
+  .carousel {
+  box-shadow: 0px 3px 8px #2a2a2a;
+}
 }
