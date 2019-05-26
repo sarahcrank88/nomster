@@ -33,17 +33,16 @@
 
 <br />
 
-  <br/>
- 
-    <% if @place.photos.present? %>
-      <% @place.photos.each do |photo| %>
-         <div class="polaroid">
-         <%= image_tag photo.picture.url %>
-         <div class="container">
-        <%= photo.caption %>
-        </div></div>
-      <% end %>
+<br/>
+  <% if @place.photos.present? %>
+    <% @place.photos.each do |photo| %>
+       <div class="polaroid">
+       <%= image_tag photo.picture.url %>
+       <div class="container">
+      <%= photo.caption %> 
+      </div></div>
     <% end %>
+  <% end %>
 
 <br />
 
@@ -72,18 +71,16 @@
 </div>
 
 <div class="float-right">
-  <!-- Button trigger modal -->
+  <% if current_user && current_user == @place.user %>
+    <%= link_to 'Edit', edit_place_path(@place), class: 'btn btn-primary' %>
+    <%= link_to 'Delete', place_path(@place), method: :delete, data: {confirm: 'Are you sure you want to delete this?'},class: 'btn btn-danger' %>
+  <% end %>
   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
     Add an Image
   </button>
-</div>
+ </div>
 
-  <div class="float-right">
-    <% if current_user && current_user == @place.user %>
-      <%= link_to 'Edit', edit_place_path(@place), class: 'btn btn-primary' %>
-      <%= link_to 'Delete', place_path(@place), method: :delete, data: {confirm: 'Are you sure you want to delete this?'},class: 'btn btn-danger' %>
-    <% end %>
-  </div>
+<div class="clear"></div>
 
 </div>
 
