@@ -1,24 +1,16 @@
-# README
+![](screenshot.png)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Battle of the Gills
+A Yelp-clone that features a crowd-sourced list of restaurants that serve grouper sandwiched in the Tampa Bay, Florida area. The app integrates with the Google Map API.
 
-Things you may want to cover:
+### Build status
+[![Build Status](https://travis-ci.org/msarit/nomster.svg?branch=master)](https://travis-ci.org/msarit/nomster)
 
-* Ruby version
+### Features
+* Built on Rails
+* Mobile-responsive
+* User Authentication: Devise gem
+* Picture Uploads: Carrierwave and MiniMagick gems
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Credits
+* [The Firehose Project](https://thefirehoseproject.com)
